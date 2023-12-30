@@ -3,11 +3,12 @@ package com.mgt.oj.judge.strategy;
 import cn.hutool.json.JSONUtil;
 import com.mgt.oj.model.dto.question.JudgeCase;
 import com.mgt.oj.model.dto.question.JudgeConfig;
-import com.mgt.oj.model.dto.questionsubmit.JudgeInfo;
+import com.mgt.oj.judge.codesandbox.model.JudgeInfo;
 import com.mgt.oj.model.entity.Question;
 import com.mgt.oj.model.enums.JudgeInfoMessageEnum;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Java 程序的判题策略
@@ -22,8 +23,8 @@ public class JavaLanguageJudgeStrategy implements JudgeStrategy {
     @Override
     public JudgeInfo doJudge(JudgeContext judgeContext) {
         JudgeInfo judgeInfo = judgeContext.getJudgeInfo();
-        Long memory = judgeInfo.getMemory();
-        Long time = judgeInfo.getTime();
+        Long memory = Optional.ofNullable(judgeInfo.getMemory()).orElse(0L);
+        Long time = Optional.ofNullable(judgeInfo.getTime()).orElse(0L);
         List<String> inputList = judgeContext.getInputList();
         List<String> outputList = judgeContext.getOutputList();
         Question question = judgeContext.getQuestion();

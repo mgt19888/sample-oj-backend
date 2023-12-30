@@ -3,7 +3,7 @@ package com.mgt.oj.judge.strategy;
 import cn.hutool.json.JSONUtil;
 import com.mgt.oj.model.dto.question.JudgeCase;
 import com.mgt.oj.model.dto.question.JudgeConfig;
-import com.mgt.oj.model.dto.questionsubmit.JudgeInfo;
+import com.mgt.oj.judge.codesandbox.model.JudgeInfo;
 import com.mgt.oj.model.entity.Question;
 import com.mgt.oj.model.enums.JudgeInfoMessageEnum;
 

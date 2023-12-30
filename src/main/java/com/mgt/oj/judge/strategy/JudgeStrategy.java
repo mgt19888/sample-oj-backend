@@ -1,6 +1,6 @@
 package com.mgt.oj.judge.strategy;
 
-import com.mgt.oj.model.dto.questionsubmit.JudgeInfo;
+import com.mgt.oj.judge.codesandbox.model.JudgeInfo;
 
 /**
  * 判题策略

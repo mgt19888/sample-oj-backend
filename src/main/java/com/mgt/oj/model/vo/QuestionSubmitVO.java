@@ -2,7 +2,7 @@ package com.mgt.oj.model.vo;
 
 
 import cn.hutool.json.JSONUtil;
-import com.mgt.oj.model.dto.questionsubmit.JudgeInfo;
+import com.mgt.oj.judge.codesandbox.model.JudgeInfo;
 import com.mgt.oj.model.entity.QuestionSubmit;
 import lombok.Data;
 import org.springframework.beans.BeanUtils;
