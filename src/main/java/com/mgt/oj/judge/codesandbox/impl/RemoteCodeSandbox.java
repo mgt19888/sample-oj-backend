@@ -17,7 +17,7 @@ public class RemoteCodeSandbox implements CodeSandbox {
     // 定义鉴权请求头和密钥
     private static final String AUTH_REQUEST_HEADER = "auth";
 
-    private static final String AUTH_REQUEST_SECRET = "secretKey";
+    private static final String AUTH_REQUEST_SECRET = "lihasjtdhs72731dnas82j";
 
 
     @Override

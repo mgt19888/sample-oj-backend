@@ -1,9 +1,6 @@
 package com.mgt.oj.judge;
 
-import com.mgt.oj.judge.strategy.DefaultJudgeStrategy;
-import com.mgt.oj.judge.strategy.JavaLanguageJudgeStrategy;
-import com.mgt.oj.judge.strategy.JudgeContext;
-import com.mgt.oj.judge.strategy.JudgeStrategy;
+import com.mgt.oj.judge.strategy.*;
 import com.mgt.oj.judge.codesandbox.model.JudgeInfo;
 import com.mgt.oj.model.entity.QuestionSubmit;
 import org.springframework.stereotype.Service;
@@ -26,7 +23,14 @@ public class JudgeManager {
         JudgeStrategy judgeStrategy = new DefaultJudgeStrategy();
         if ("java".equals(language)) {
             judgeStrategy = new JavaLanguageJudgeStrategy();
+        } else if ("python".equals(language)) {
+            judgeStrategy = new PythonLanguageJudgeStrategy();
+        } else if ("cpp".equals(language)) {
+            judgeStrategy = new CppLanguageJudgeStrategy();
+        } else if ("c".equals(language)) {
+            judgeStrategy = new CLanguageJudgeStrategy();
         }
+
         return judgeStrategy.doJudge(judgeContext);
     }
 
